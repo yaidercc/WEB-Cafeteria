@@ -1,0 +1,45 @@
+@import "./components/colors";
+.icon-coffe{
+    color: $cafe-oscuro!important;
+}
+.navbar{
+    background-color: $cafe-claro!important;
+    a{
+        &:is(:hover,.active){
+            color: #fff!important;
+        }
+        &.active{
+            font-weight: bolder;
+        }
+    }
+}
+.image-product{
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    background-color: $cafe-claro;
+    color: $cafe-oscuro;
+}
+
+.price-product{
+    color: $cafe-oscuro;
+    font-weight: bold;
+}
+.stock{
+    span{
+        color: $cafe-oscuro;
+        font-weight: bolder;
+    }
+}
+.btn-primary{
+    border: none;
+    outline: 2px solid $cafe-oscuro;
+    color: $cafe-oscuro;
+    background-color: rgba($color: $cafe-claro, $alpha: 0.2);
+    transition: .3s ease-in-out;
+    &:hover{
+        background-color: $cafe-oscuro;
+        color: #fff;
+        outline: none;
+    }
+}

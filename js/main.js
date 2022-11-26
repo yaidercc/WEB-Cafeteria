@@ -1,4 +1,4 @@
-(function peticion(metodo, param) {
+export function peticion(metodo, param=null) {
     // create new formdata
     let data = new FormData();
     // add method
@@ -19,8 +19,5 @@
         .then(data => data)
         .catch(err => err)
     // return data
-    console.log(response);
     return response;
-})("getProducts",["dad"]).then(data=>{
-    console.log(data);
-});
+}

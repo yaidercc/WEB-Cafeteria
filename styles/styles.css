@@ -1,0 +1,46 @@
+.icon-coffe {
+  color: #5d2417 !important;
+}
+
+.navbar {
+  background-color: #c57d56 !important;
+}
+.navbar a:is(:hover, .active) {
+  color: #fff !important;
+}
+.navbar a.active {
+  font-weight: bolder;
+}
+
+.image-product {
+  text-align: center;
+  font-size: 50px;
+  padding: 10px;
+  background-color: #c57d56;
+  color: #5d2417;
+}
+
+.price-product {
+  color: #5d2417;
+  font-weight: bold;
+}
+
+.stock span {
+  color: #5d2417;
+  font-weight: bolder;
+}
+
+.btn-primary {
+  border: none;
+  outline: 2px solid #5d2417;
+  color: #5d2417;
+  background-color: rgba(197, 125, 86, 0.2);
+  transition: 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #5d2417;
+  color: #fff;
+  outline: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
