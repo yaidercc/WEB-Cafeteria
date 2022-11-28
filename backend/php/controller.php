@@ -22,6 +22,7 @@ class Controller
     }
     public function insertProduct()
     {
+        print_r($_POST);
         echo json_encode($this->model->insertProduct($_POST));
     }
     public function updateProduct()

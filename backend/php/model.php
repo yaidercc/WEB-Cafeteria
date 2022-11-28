@@ -31,7 +31,8 @@ class model {
         
     }
     function insertProduct($infoProduct){
-        $query= "INSERT INTO `producto`(`NOMBRE`, `REFERENCIA`, `PRECIO`, `PESO`, `ID_CATEGORIA_FK`, `STOCK`, `FECHA_CREACION`) VALUES (?,?,?,?,?,?,'now()')";
+        $query= "INSERT INTO `producto`(`NOMBRE`, `REFERENCIA`, `PRECIO`, `PESO`, `ID_CATEGORIA_FK`, `STOCK`, `FECHA_CREACION`) 
+        VALUES (?,?,?,?,?,?,now())";
         $sql=$this->con->prepare($query);
         $sql->bindParam(1,$infoProduct["nombre"]);
         $sql->bindParam(2,$infoProduct["referencia"]);
@@ -56,7 +57,7 @@ class model {
                         `PESO`=?,
                         `ID_CATEGORIA_FK`=?,
                         `STOCK`=? 
-                    WHERE ID_PRODUCTO=$infoProduct[ID_PRODUCTO]";
+                    WHERE ID_PRODUCTO=$infoProduct[id_producto]";
         $sql=$this->con->prepare($query);
         $sql->bindParam(1,$infoProduct["nombre"]);
         $sql->bindParam(2,$infoProduct["referencia"]);
@@ -74,7 +75,7 @@ class model {
     }
 
     function getCategories(){
-        $query= "SELECT * FROM CATEGORIAS";
+        $query= "SELECT * FROM CATEGORIA";
         $sql=$this->con->prepare($query);
         $sql->execute();
         $data=$sql->fetchAll(PDO::FETCH_ASSOC);
